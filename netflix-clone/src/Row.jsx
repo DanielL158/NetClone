@@ -29,15 +29,16 @@ function Row ({ title, fetchURL, isLargeRow }) {
   };
 
   const handleClick = (movie) => {
+    console.log(movie.id)
     if (trailerUrl) {
       setTrailerUrl('');
     } else {
-      movieTrailer(movie?.name || "")
+      movieTrailer(null, { tmdbId: movie.id } || "")
       .then((url) => {
         const urlParams = new URLSearchParams(new URL(url).search);
         setTrailerUrl(urlParams.get('v'))
       })
-      .catch((error) => console.log(error))
+      .catch((error) => alert('No Trailer for that Movie'))
     }
   }
 
@@ -53,7 +54,7 @@ function Row ({ title, fetchURL, isLargeRow }) {
             className={`row_poster ${isLargeRow && "row_posterLarge"}`}
             src={`${base_url}${isLargeRow ? movie.poster_path : movie.backdrop_path}`}
             alt={movie.name}
-          />
+            />
         ))}
       </div>
       {trailerUrl && <YouTube videoId={trailerUrl} opts={opts} /> }
