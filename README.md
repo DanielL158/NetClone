@@ -7,21 +7,21 @@ Netflix clone built for practice
 * HTML5
 * CSS3
 * Firebase
-* Yarn
+* Npm
 * Babel
 
 ## Run Application ##
-1. Yarn installations of dependencies
+1. NPM installations of dependencies
       ``` 
-      yarn install 
+      npm install 
       ```
 3. Build the application
       ```
-      yarn run build 
+     npm run build 
       ```
 4. Start the application
       ``` 
-      yarn run start 
+      npm run start 
       ```
 7. Navigate to ```http://localhost:3000```
 
