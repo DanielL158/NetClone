@@ -6,7 +6,8 @@ import requests from './requests';
 function App() {
   return (
     <div className="App">
-      <h1>NETFLIX</h1>
+      {/* Nav Bar */}
+      {/* Banner */}
       <Row
         title="NETFLIX ORIGINALS"
         fetchURL={requests.fetchNetflixOriginals}
