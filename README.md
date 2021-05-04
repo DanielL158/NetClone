@@ -25,5 +25,5 @@ Netflix clone built for practice
       ```
 7. Navigate to ```http://localhost:3000```
 
-## To see deployed app, click down blow ##
+## To see deployed app, click down below ##
 https://netflix-clone-e0e85.web.app/
